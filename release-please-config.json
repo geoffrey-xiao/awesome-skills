@@ -1,0 +1,19 @@
+{
+  "separate-pull-requests": true,
+  "include-component-in-tag": true,
+  "tag-separator": "-v",
+  "packages": {
+    "skills/npm-package-scan": {
+      "release-type": "simple",
+      "package-name": "npm-package-scan",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": ["SKILL.md"]
+    },
+    "skills/safe-clawhub-publisher": {
+      "release-type": "simple",
+      "package-name": "safe-clawhub-publisher",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": ["SKILL.md"]
+    }
+  }
+}

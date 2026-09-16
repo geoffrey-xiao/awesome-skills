@@ -1,0 +1,23 @@
+# Local Codex test entrypoint
+.agents/
+
+# Release archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# macOS
+.DS_Store
+
+# Local research/cache files
+.firecrawl/
+
+# Python caches
+__pycache__/
+.pytest_cache/
+
+# Build and release output
+dist/
+build/
+.clawhub/
