@@ -28,6 +28,7 @@
 - Local validator: `<pass/warn/fail>`
 - Ecosystem validator: `<result>`
 - ClawHub dry-run: `<result>`
+- Command result/error: `<exit status, sanitized stderr, phase, and classification>`
 - Security review: `<blockers and warning details>`
 - Validator/CLI file-set match: `<yes/no>`
 

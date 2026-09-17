@@ -17,6 +17,18 @@ Stop and report the account/owner evidence available without exposing credential
 
 For missing authentication, prefer the installed CLI's device flow with browser opening disabled so the verification URL and one-time code can be relayed safely. Keep the interactive process alive while polling in bounded intervals. If persistent sessions are unavailable, ask the user to complete the same command in their terminal. Never ask them to paste an API token into chat. After success, run `clawhub whoami`, then repeat remote inspection and dry-run.
 
+## Command error reporting
+
+Every release-critical command must preserve and report its result, with special priority for the final publish command. When the publish command, dry-run, account check, or remote verification exits non-zero, writes an error to stderr, returns empty output, or emits a rate-limit/reset message, show the sanitized message, phase, exit status, and next safe action to the user. Do not replace an actionable server error with `publish failed`, and do not suppress a release-critical error with `|| true` except for an explicitly expected absence check whose exit status and interpretation are reported separately. Failures from ordinary local helper commands only need escalation when they affect the release decision.
+
+Classify the outcome before deciding what happens next:
+
+- **Rejected:** ClawHub returned a definitive validation or authorization error, such as a reserved topic or too many topics. Do not retry the same command. Explain the exact correction, rerun local preflight and dry-run, and obtain fresh confirmation for the corrected command.
+- **Unavailable:** The command could not reach ClawHub or the server returned a temporary limit. Report the retry delay or network condition and perform only the bounded read-only check allowed by this workflow.
+- **Unknown:** Publication may have reached the server but the response is incomplete, empty, or timed out. Do not publish again until bounded remote verification establishes failure.
+
+Never expose tokens, cookies, device secrets, or other credentials while relaying command errors.
+
 ## Duplicate or rejected version
 
 Inspect the remote package first. Never overwrite or reuse an immutable version. Re-evaluate the diff and propose the next appropriate version; do not mechanically increment until the server accepts it.
