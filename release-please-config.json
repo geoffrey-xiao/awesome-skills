@@ -1,7 +1,7 @@
 {
   "separate-pull-requests": true,
   "include-component-in-tag": true,
-  "tag-separator": "-v",
+  "tag-separator": "-",
   "packages": {
     "skills/npm-package-scan": {
       "release-type": "simple",
