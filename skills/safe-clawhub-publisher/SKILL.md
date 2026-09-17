@@ -2,7 +2,7 @@
 name: safe-clawhub-publisher
 description: Safely validate, dry-run, publish, and verify ClawHub skills and OpenClaw plugins. Use for versioning, changelogs, secret scans, fingerprint checks, authentication, and post-release verification; do not use to design a package.
 metadata:
-  version: "1.0.0" # x-release-please-version
+  version: "1.0.1" # x-release-please-version
 ---
 
 # Safe ClawHub Publisher
