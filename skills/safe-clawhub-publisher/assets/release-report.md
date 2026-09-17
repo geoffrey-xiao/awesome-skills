@@ -51,7 +51,7 @@
 - Owner/metadata/changelog: `<result>`
 - Files/hashes/tags: `<result>`
 - Publication state: `<published/pending/unknown>`
-- Publication attempts: `<1 initial | 1 initial + 1 user-confirmed retry>`
+- Publication attempts: `<count; list each attempt's confirmation and result>`
 - Non-mutating verification checks: `<0/1/2; never more than 2 for an unclear response>`
 - Verification sources: `<CLI/API/canonical ClawHub page>`
 - CLI/API visibility: `<confirmed/delayed/unavailable>`
