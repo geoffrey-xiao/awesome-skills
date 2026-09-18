@@ -24,7 +24,9 @@ Review package risk without changing the repository by default. Separate observe
 4. Perform an offline-first review using [references/checklist.md](references/checklist.md). Load [references/commands.md](references/commands.md) only when commands are needed.
 5. Run read-only local commands when useful. Before any registry-backed command, explain that dependency names and versions may be sent to a package registry; skip it when network use is unavailable or inappropriate.
 6. Correlate findings across manifests, lockfiles, installed dependency trees, audit output, and registry metadata. Do not treat one noisy tool result as conclusive.
-7. Return a prioritized report using [references/report-template.md](references/report-template.md). Include exact evidence, likely impact, confidence, and the smallest safe verification or remediation step.
+7. Build one structured result model before writing prose. Use [references/report-schema.md](references/report-schema.md) for the schema, stable finding IDs, dependency inventory, and network-check context.
+8. Return a prioritized report using [references/report-template.md](references/report-template.md). Include exact evidence, likely impact, confidence, and the smallest safe verification or remediation step.
+9. At scan completion, tell the user that the full result can be exported as Markdown (default) or JSON. Do not write a report file unless the user requests export or explicitly enables report/CI mode. When requested, use `scripts/export_report.py`; report the output path and whether registry-backed checks were included.
 
 ## Evidence and severity
 
