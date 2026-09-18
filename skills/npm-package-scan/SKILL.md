@@ -2,7 +2,7 @@
 name: npm-package-scan
 description: Audit JavaScript and TypeScript repository dependencies for security, supply-chain, maintenance, version, lockfile, and cleanup risks. Use for npm, pnpm, Yarn, or Bun package reviews; do not use for automatic dependency upgrades unless the user explicitly requests changes.
 metadata:
-  version: "1.1.0" # x-release-please-version
+  version: "1.2.0" # x-release-please-version
   openclaw:
     requires:
       anyBins:
