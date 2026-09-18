@@ -23,7 +23,7 @@ Developers use this skill for an evidence-based, read-only dependency review bef
 
 ## Output
 
-Markdown report with scope, confidence, prioritized findings, evidence, impact, verification commands, blast radius, and a sequenced upgrade or cleanup plan.
+Prioritized Markdown report by default, with optional JSON export for CI, archiving, and future diffing. Reports include scope, confidence, network-check context, evidence, impact, verification commands, blast radius, and a sequenced upgrade or cleanup plan.
 
 ## Version
 
